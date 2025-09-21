@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+spacy
+benepar
+nltk
+
+# Modelleri doğrudan paket olarak yüklüyoruz
+# spaCy İngilizce modeli
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.1/en_core_web_sm-3.4.1-py3-none-any.whl
+# benepar İngilizce modeli
+https://github.com/nikitakit/self-attentive-parser/releases/download/benepar_en3/benepar_en3.zip
