@@ -1,6 +1,8 @@
 # 1. Adım: Temel Python imajını seç
 FROM python:3.9-slim
 
+RUN apt-get update && apt-get install -y build-essential
+
 # 2. Adım: Çalışma dizinini ayarla
 WORKDIR /app
 
