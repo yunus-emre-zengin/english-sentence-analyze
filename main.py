@@ -57,3 +57,16 @@ def parse_sentence(request: ParseRequest):
     json_output = tree_to_json(tree)
     
     return json_output
+
+
+@app.post("/parse-string", tags=["Parsing"])
+def parse_sentence_string(request: ParseRequest):
+    """
+    Verilen cümleyi analiz eder ve yapı ağacını ham string olarak döndürür.
+    """
+    doc = nlp(request.sentence)
+    sent = list(doc.sents)[0]
+    parse_tree_string = sent._.parse_string
+    
+    # Sonucu JSON yerine düz metin olarak döndür
+    return PlainTextResponse(content=parse_tree_string)
