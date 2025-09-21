@@ -8,6 +8,8 @@ WORKDIR /app
 # Bu adımı koddan önce yapmak, kod değiştiğinde bağımlılıkların tekrar kurulmasını engeller (Docker katman önbelleği)
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+RUN python -c "import benepar; benepar.download('benepar_en3')"
+
 
 # 4. Adım: Uygulama kodunu container'a kopyala
 COPY . .
