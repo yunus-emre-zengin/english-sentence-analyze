@@ -4,6 +4,8 @@ import json
 from nltk import Tree
 from fastapi import FastAPI
 from pydantic import BaseModel
+from fastapi.responses import PlainTextResponse
+
 
 # --- Uygulama Başlangıcında Modelleri Yükle ---
 # Bu kısım sadece bir kez çalışır ve modelleri hafızaya alır.
